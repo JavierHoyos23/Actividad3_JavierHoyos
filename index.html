@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Panel de Control</title>
+    <link href="./css/styles.css" rel="stylesheet">
+    <script defer src="./js/script.js"></script>
+</head>
+    <body class="bg-gray-100 text-gray-900">
+
+        <!-- Contenedor principal -->
+        <div class="flex h-screen">
+            <!-- Sidebar -->
+            <aside id="sidebar" class="bg-gray-800 text-white w-64 p-5 space-y-6 absolute inset-y-0 left-0 transform -translate-x-full transition-transform md:relative md:translate-x-0" aria-label="Menú de navegación">
+                <button id="closeSidebar" class="md:hidden text-white text-2xl absolute top-4 right-4">&times;</button>
+                <h2 class="text-xl font-bold">Panel de Control</h2>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="block py-2 px-4 hover:bg-gray-700">Inicio</a></li>
+                        <li><a href="#" class="block py-2 px-4 hover:bg-gray-700">Usuarios</a></li>
+                        <li><a href="#" class="block py-2 px-4 hover:bg-gray-700">Ajustes</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Contenido principal -->
+            <main class="flex-1 p-6">
+                <header class="flex justify-between items-center bg-white shadow-md p-4 rounded-md">
+                    <h1 class="text-xl font-bold">Bienvenido</h1>
+                    <button id="openSidebar" class="md:hidden p-2 bg-gray-800 text-white rounded">☰</button>
+                </header>
+
+                <section class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-white p-4 rounded shadow">
+                        <h3 class="font-semibold text-lg">Usuarios Activos</h3>
+                        <p id="userCount" class="text-3xl font-bold">0</p>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
